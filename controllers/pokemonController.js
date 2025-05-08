@@ -42,6 +42,8 @@ const getPokemonById = async (req, res) => {
       id: data.id,
       name: data.name,
       image: data.sprites.other["official-artwork"].front_default,
+      types: data.types,
+      abilities: data.abilities,
     };
 
     pokemonCache.set(`pokemon_${id}`, pokemon);
